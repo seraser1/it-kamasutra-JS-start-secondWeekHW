@@ -24,6 +24,6 @@ console.log(isAccess);
 
 // your code
 
-isAccess = ((isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass)) ? 'true' : 'false';
-console.log(isAccess);
+// isAccess = ((isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass)) ? 'true' : 'false';
+// console.log(isAccess);
 
