@@ -18,6 +18,6 @@ findCommonElements([1, 2, 3], [2, 3, 4]) // [2, 3]
 */
 
 function findCommonElements(array1, array2) {
-    return [...new Set(array1)].filter(item => array2.includes(item));
+    return array1.filter(item => array2.includes(item));
 }
-// console.log(findCommonElements([1, 2, 3], [2, 3, 4]));
+console.log(findCommonElements([1, 2, 3], [2, 3, 4]));
