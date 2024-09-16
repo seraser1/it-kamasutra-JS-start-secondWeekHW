@@ -37,15 +37,11 @@ const gallery = {
 
 
 function updateGallery(gallery, keyOfTheProduct, newMeaning) {
-  for (let key in gallery){
-    if (key === keyOfTheProduct) gallery[keyOfTheProduct] = newMeaning;
-    else gallery[keyOfTheProduct] = newMeaning;
-  }
-  // gallery[keyOfTheProduct] = newMeaning;
+  gallery[keyOfTheProduct] = newMeaning;
 }
 
-updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
-updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali')
+// updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
+// updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali')
 
 
-console.log(gallery);
+// console.log(gallery);
