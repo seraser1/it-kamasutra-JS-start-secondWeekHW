@@ -9,10 +9,15 @@
 
 - Новая строка с каждым символом, повторенным дважды.
 
-Пример работы функции: `doubleEachCharacter('hello')` вернёт `'hheelllloo'`
+Пример работы функции: `doubleEachCharacter('hello')` 
+ернёт `'hheelllloo'`
 */
 
-function doubleEachCharacter(str) {
-    return ''.concat(...Array.from(str, n => n.repeat(2)))
+
+
+function doubleEachCharacter(string) {
+    return ''.concat(...Array.from(string, n => n.repeat(2)))
 }
+
+
 // console.log(doubleEachCharacter('hello'));

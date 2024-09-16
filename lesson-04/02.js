@@ -18,8 +18,9 @@
 function findUniqueElements(array) {
     return array.filter((element, index) => index === array.indexOf(element));
 }
+
 // function findUniqueElements(array) {
 //     return [...new Set(array)]
 // }
 
-// console.log(findUniqueElements([23,34,45,23,34,56]));
+console.log(findUniqueElements([23,34,45,23,34,56]));
