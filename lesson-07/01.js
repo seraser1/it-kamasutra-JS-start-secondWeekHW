@@ -6,4 +6,14 @@
   Другой вариант - использовать метод split строк, и метод массива join.
 */
 
-function capitalizeWords() {}
+// function capitalizeWords() {
+  
+// }
+
+function capitalizeWords(str) {
+  
+} 
+
+
+
+

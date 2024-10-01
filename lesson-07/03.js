@@ -9,6 +9,13 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
-function truncate(str, maxLength) {
+// function truncate(str, maxLength) {
+//   if (str.length > maxLength) return str.slice(0, maxLength) + '...';
+//   else return str;
+//   }
+//   console.log(truncate("Вот, что мне так авунек", 20));
+  
+  
+  
   // your code
-}
+
