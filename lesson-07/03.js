@@ -10,7 +10,7 @@
 */
 
 const truncate = (str, maxLength) => {
-  if (maxLength > str.length) return str
+  if (maxLength >= str.length) return str
   return str.slice(0, maxLength) + '...';
 }
 
