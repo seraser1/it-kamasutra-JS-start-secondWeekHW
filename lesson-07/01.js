@@ -6,23 +6,27 @@
   Другой вариант - использовать метод split строк, и метод массива join.
 */
 
-// function capitalizeWords() {
-  
-// }
+function capitalizeWords(str) {
+  const words  = str.split(' ');
+  const result = [];
+  for (let i = 0; i < words.length; i++) {
+    // const word = words[i];
+    const resEl = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase()
+    result.push(resEl)
+  }
+  return result.join(' ')
+} 
 
 // function capitalizeWords(str) {
-  
-// } 
+//   return str.split(" ") // Разбиваем строку на массив слов
+//             .map(word => 
+//                 // Преобразуем каждое слово
+//                 word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+//             )
+//             .join(' '); // Объединяем слова обратно в строку
+// }
 
-function capitalizeWords(str) {
-  return str.split(" ") // Разбиваем строку на массив слов
-            .map(word => 
-                // Преобразуем каждое слово
-                word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-            )
-            .join(' '); // Объединяем слова обратно в строку
-}
-
+// console.log(capitalizeWords("Это пример строки. Здесь много слов!")); // "Это Пример Строки"
 // console.log(capitalizeWords("это пример строки")); // "Это Пример Строки"
 // console.log(capitalizeWords("здесь еще один пример")); // "Здесь Еще Один Пример"
 // console.log(capitalizeWords("ПРИМЕР ЗНАКОВ ПРЕПИНАНИЯ!")); // "Пример Знаков Препинания!"
