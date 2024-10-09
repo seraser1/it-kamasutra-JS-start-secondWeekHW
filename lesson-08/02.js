@@ -33,48 +33,27 @@ let isTimerStarted = false
 let timerId
 
 startButton.addEventListener('click', () => {
-  let counter = 3
-
-  // your code
-})
+  if (!isTimerStarted) {
+      let counter = 3;
+      countdownDisplay.textContent = counter;
+      isTimerStarted = true;
+      timerId = setInterval(() => {
+          counter--;
+          if (counter <= 0) {
+              clearInterval(timerId);
+              countdownDisplay.textContent = '🚀';
+              isTimerStarted = false;
+          } else {
+              countdownDisplay.textContent = counter;
+          }
+      }, 1000);
+  }
+});
 
 cancelButton.addEventListener('click', () => {
-  // your code
-})
-
-
-// const startButton = document.getElementById('start')
-// const cancelButton = document.getElementById('cancel')
-// const countdownDisplay = document.getElementById('countdown')
-
-// let isTimerStarted = false
-// let timerId
-
-// startButton.addEventListener('click', () => {
-//   let counter = 3
-//   if (!isTimerStarted) {
-//     countdownDisplay.textContent = '3';
-//     isTimerStarted = true;
-//     startCount();
-// }
-//   // your code
-// })
-
-// cancelButton.addEventListener('click', () => {
-//   // your code if (isTimerStarted) {
-//     clearInterval(timerId);
-//     countdownDisplay.textContent = 'Отменено';
-//     isTimerStarted = false;
-// })
-// function startCount(){
-//   let counter = 3;
-//   timerId = setInterval(() =>{
-//     if ( counter <= 0){
-//       clearInterval(timerId)
-//       countdownDisplay.textContent = '🚀'
-//     } else{ 
-//       countdownDisplay.textContent = counter--
-//     }
-//   }, 1000)
-
-// }
+  if (isTimerStarted) {
+      clearInterval(timerId);
+      countdownDisplay.textContent = 'Отменено';
+      isTimerStarted = false;
+  }
+});
