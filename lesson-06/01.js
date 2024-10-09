@@ -37,7 +37,30 @@ prev.addEventListener('click',function(){
   updateImage();
 });
 
+// const image = document.querySelector('img');
+// const prevButton = document.getElementById('prev-button');
+// const nextButton = document.getElementById('next-button');
 
+// let currentImageIndex = 0;
+
+// function showImage() {
+//   image.src = WEB_TECH_IMAGES[currentImageIndex];
+// }
+
+// function nextImage() {
+//   currentImageIndex = (currentImageIndex + 1) % WEB_TECH_IMAGES.length;
+//   showImage();
+// }
+
+// function prevImage() {
+//   currentImageIndex = (currentImageIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length;
+//   showImage();
+// }
+
+// nextButton.addEventListener('click', nextImage);
+// prevButton.addEventListener('click', prevImage);
+
+// showImage()
 
 
 
