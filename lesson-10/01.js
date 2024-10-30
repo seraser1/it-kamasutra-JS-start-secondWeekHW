@@ -29,6 +29,10 @@ const model = {
     this.movies.push(newMovie)
     view.renderMovies(this.movies)
   },
+  deleteTask(movieId) {
+    this.movies = this.movies.filter((movie) => movie.id !== movieId)
+    view.renderMovies(this.movies)
+  }
   // your code
 }
 
@@ -39,6 +43,7 @@ const view = {
     const form = document.querySelector('.form')
     const inputTitle = document.querySelector('.input-title')
     const inputDescription = document.querySelector('.input-description')
+    const list = document.querySelector('.list')
 
     form.addEventListener('submit', function (event) {
       event.preventDefault()
@@ -51,6 +56,14 @@ const view = {
     })
 
     // your code
+    // 1. проверяем, что клик был по кнопке удаления
+    list.addEventListener('click', function (event) {
+    if (event.target.classList.contains('delete-button')) {
+      const movieId = +event.target.parentElement.id
+      // 2. вызываем метод контроллера для удаления задачи
+      controller.deleteTask(movieId)
+    }
+  })
   },
   renderMovies(movies) {
     const list = document.querySelector('.list')
@@ -91,6 +104,9 @@ const controller = {
     }
   },
   // your code
+  deleteTask(movieId) {
+    model.deleteTask(movieId)
+  },
 }
 
 function init() {
