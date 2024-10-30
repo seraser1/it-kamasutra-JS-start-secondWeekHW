@@ -56,8 +56,6 @@ const view = {
     })
 
     // your code
-    // Добавляем обработчик события для удаления фильмов
-    // Проверяем, что клик был по кнопке удаления
     list.addEventListener('click', function (event) {
     if (event.target.classList.contains('delete-button')) {
       const movieId = +event.target.parentElement.id
